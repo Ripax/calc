@@ -1,0 +1,22 @@
+# CodeBy : HRMLDigger
+# Date : 17 July 2022
+
+price = int(input("Price per killo : "))
+price_perGram = price / 100*10
+print("price per Gram is : ", price_perGram)
+default = int(0)
+KG = input("KG you bought : ") or 0
+if not KG:
+    KG = default
+else:
+    KG = int(KG) * 10
+
+GM = input("GM you bought : ") or 0
+if not GM:
+    GM = default
+else:
+    GM = int(GM) / 100
+
+fPrice = (price_perGram * KG + price_perGram * GM)
+print(f"Final Price is : {fPrice}")
+
